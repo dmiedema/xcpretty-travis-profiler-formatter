@@ -48,8 +48,6 @@ class TravisProfilerFormatter < XCPretty::Formatter
     EMPTY;
   end
 
-  private
-
   def mark_compilation(file_path, file_name)
     @current_compilation_phase.push({
       :start_time => Time.now,
@@ -91,7 +89,7 @@ class TravisProfilerFormatter < XCPretty::Formatter
   ### Travis Formatting
   ###
   # from https://github.com/kattrali/xcpretty-travis-formatter
-def open_fold(text)
+  def open_fold(text)
     return if text == @open_fold
     close_fold(@open_fold) if @open_fold
     print "travis_fold:start:#{text}\r"
