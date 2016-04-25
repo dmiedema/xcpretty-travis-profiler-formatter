@@ -1,29 +1,29 @@
-# XCPretty Profiler Formatter
+# XCPretty Travis Profiler Formatter
 
-Custom formatter for [xcpretty](https://github.com/supermarin/xcpretty) that calculates the compile time for files in Xcode projects and prints them to `stdout`.
+Custom formatter for [xcpretty](https://github.com/supermarin/xcpretty) that calculates the compile time for files in Xcode projects and prints them to `stdout` formatted for Travis.
 
 ## Installation
 
 Run:
 
 ```
-gem install xcpretty-profiler-formatter
+gem install xcpretty-travis-profiler-formatter
 ```
 
 ## Usage
 
-Specify `xcpretty-profiler-formatter` as a custom formatter to `xcpretty`:
+Specify `xcpretty-travis-profiler-formatter` as a custom formatter to `xcpretty`:
 
 ```bash
 #!/bin/bash
 
-xcodebuild -project "Project.xcodeproj" clean build | xcpretty -f `xcpretty-profiler-formatter`
+xcodebuild -project "Project.xcodeproj" clean build | xcpretty -f `xcpretty-travis-profiler-formatter`
 ```
 
 ## Sample output
 
 ```
-xcodebuild -workspace BrightFutures.xcworkspace -scheme BrightFutures-iOS clean build | xcpretty -f `xcpretty-profiler-formatter`
+xcodebuild -workspace BrightFutures.xcworkspace -scheme BrightFutures-iOS clean build | xcpretty -f `xcpretty-travis-profiler-formatter`
 
 [...]
 
@@ -39,3 +39,4 @@ xcodebuild -workspace BrightFutures.xcworkspace -scheme BrightFutures-iOS clean 
 ## Author
 
 * Lars Lockefeer ([@larslockefeer](https://twitter.com/larslockefeer))
+* Modified by Daniel Miedema ([@no_good_ones](https://twitter.com/no_good_ones))
